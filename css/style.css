@@ -1,0 +1,155 @@
+body header {
+  background-color: #f7f7f7;
+}
+
+body .about {
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(85, 83, 83, 0.5))), url(../img/truck_about_1.jpg);
+  background-image: linear-gradient(rgba(85, 83, 83, 0.5)), url(../img/truck_about_1.jpg);
+  height: auto;
+  padding-top: 200px;
+  height: 55rem;
+  color: white;
+}
+
+body .about h1 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+body .about h3 {
+  font-size: 24px;
+}
+
+body .about p {
+  font-size: 20px;
+  line-height: normal;
+}
+
+body .about p a {
+  color: #cadd74;
+  text-decoration: none;
+}
+
+body .about p a:hover {
+  color: #33381d;
+}
+
+body .about p:nth-child(5) {
+  padding-bottom: 4rem;
+}
+
+body .about .about__link {
+  text-align: center;
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  background-color: black;
+  color: #dbd8d8;
+}
+
+body .about .about__link:hover {
+  background-color: #4e4d4d;
+  text-decoration: none;
+}
+
+body .services {
+  padding: 4rem;
+}
+
+body .services h2 {
+  text-transform: uppercase;
+  color: #cadd74;
+}
+
+body .services .services__item {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .services .services__item img {
+  display: block;
+  width: 100%;
+}
+
+body .services .services__item p {
+  height: 115px;
+  background-color: black;
+  color: white;
+  padding: 1rem 1rem 2rem;
+}
+
+body .services .services__item:nth-child(2) p {
+  background-color: #394736;
+}
+
+body .services .services__item:nth-child(3) p {
+  background-color: #cadd74;
+  color: black;
+}
+
+body .price {
+  padding: 4rem;
+  background-color: #f7f7f7;
+}
+
+body .price h2 {
+  text-transform: uppercase;
+  color: #cadd74;
+}
+
+body .contact-us {
+  padding: 4rem;
+}
+
+body .contact-us .container {
+  background-color: #cadd74;
+  padding: 4rem;
+}
+
+body .contact-us .container p {
+  padding: 1rem;
+}
+
+body .contact-us .container .form {
+  background-color: #cadd74;
+}
+
+body .contact-us .container .form .txt {
+  border: none;
+  border-bottom: 1px solid black;
+  height: 3rem;
+  background-color: #cadd74;
+}
+
+body .contact-us .container .form .txtarea {
+  background-color: #cadd74;
+  border: none;
+  border-bottom: 1px solid black;
+  height: 10rem;
+  margin: 10px 0;
+}
+
+body .contact-us .container .form .submitbtn {
+  border: none;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+}
+
+body .map {
+  padding: 4rem;
+  background-color: #f7f7f7;
+}
+
+body .map h2 {
+  text-transform: uppercase;
+  color: #cadd74;
+  padding-bottom: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
