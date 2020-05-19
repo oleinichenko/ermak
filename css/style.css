@@ -1,8 +1,30 @@
-body header {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h2 {
+  text-transform: uppercase;
+  color: #cadd74;
+  text-align: center;
+}
+
+header {
   background-color: #f7f7f7;
 }
 
-body .about {
+header .nav-link {
+  color: #cadd74;
+  text-transform: uppercase;
+}
+
+header .nav-link:hover {
+  color: #33381d;
+}
+
+.main-info {
   background-size: cover;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(85, 83, 83, 0.5))), url(../img/truck_about_1.jpg);
   background-image: linear-gradient(rgba(85, 83, 83, 0.5)), url(../img/truck_about_1.jpg);
@@ -12,34 +34,30 @@ body .about {
   color: white;
 }
 
-body .about h1 {
+.main-info h1 {
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
-body .about h3 {
-  font-size: 24px;
-}
-
-body .about p {
+.main-info p {
   font-size: 20px;
   line-height: normal;
 }
 
-body .about p a {
+.main-info p a {
   color: #cadd74;
   text-decoration: none;
 }
 
-body .about p a:hover {
+.main-info p a:hover {
   color: #33381d;
 }
 
-body .about p:nth-child(5) {
+.main-info p:nth-child(5) {
   padding-bottom: 4rem;
 }
 
-body .about .about__link {
+.main-info .main-info__link {
   text-align: center;
   padding: 1rem 2rem;
   border: 1px solid black;
@@ -47,21 +65,16 @@ body .about .about__link {
   color: #dbd8d8;
 }
 
-body .about .about__link:hover {
+.main-info .main-info__link:hover {
   background-color: #4e4d4d;
   text-decoration: none;
 }
 
-body .services {
+.services {
   padding: 4rem;
 }
 
-body .services h2 {
-  text-transform: uppercase;
-  color: #cadd74;
-}
-
-body .services .services__item {
+.services .services__item {
   width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,62 +85,85 @@ body .services .services__item {
           flex-direction: column;
 }
 
-body .services .services__item img {
+.services .services__item img {
   display: block;
   width: 100%;
 }
 
-body .services .services__item p {
+.services .services__item p {
   height: 115px;
   background-color: black;
   color: white;
   padding: 1rem 1rem 2rem;
 }
 
-body .services .services__item:nth-child(2) p {
+.services .services__item:nth-child(2) p {
   background-color: #394736;
 }
 
-body .services .services__item:nth-child(3) p {
+.services .services__item:nth-child(3) p {
   background-color: #cadd74;
   color: black;
 }
 
-body .price {
+.price {
   padding: 4rem;
   background-color: #f7f7f7;
 }
 
-body .price h2 {
-  text-transform: uppercase;
-  color: #cadd74;
-}
-
-body .contact-us {
+.comment {
   padding: 4rem;
 }
 
-body .contact-us .container {
+.comment .comment__item {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  background-color: #cadd74;
+  text-align: center;
+}
+
+.comment .comment__item p:nth-child(2) {
+  font-weight: bold;
+}
+
+.comment .comment__item p:nth-child(3) {
+  font-style: italic;
+}
+
+.comment .comment__item p:nth-child(4) {
+  text-align: left;
+}
+
+.contact-us {
+  background-color: #f7f7f7;
+  padding: 6rem;
+}
+
+.contact-us h2 {
+  color: black;
+}
+
+.contact-us .container {
   background-color: #cadd74;
   padding: 4rem;
 }
 
-body .contact-us .container p {
+.contact-us .container p {
   padding: 1rem;
 }
 
-body .contact-us .container .form {
+.contact-us .container .form {
   background-color: #cadd74;
 }
 
-body .contact-us .container .form .txt {
+.contact-us .container .form .txt {
   border: none;
   border-bottom: 1px solid black;
   height: 3rem;
   background-color: #cadd74;
 }
 
-body .contact-us .container .form .txtarea {
+.contact-us .container .form .txtarea {
   background-color: #cadd74;
   border: none;
   border-bottom: 1px solid black;
@@ -135,21 +171,101 @@ body .contact-us .container .form .txtarea {
   margin: 10px 0;
 }
 
-body .contact-us .container .form .submitbtn {
+.contact-us .container .form .submitbtn {
   border: none;
   background-color: black;
   padding: 1rem;
   color: white;
 }
 
-body .map {
+.contact-us .container .form .submitbtn:hover {
+  background-color: #4e4d4d;
+}
+
+.contact-us .popup-fade {
+  display: none;
+}
+
+.contact-us .popup-fade:before {
+  content: '';
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
+}
+
+.contact-us .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  width: 360px;
+  margin-left: -200px;
+  background: #cadd74;
+  z-index: 99999;
+  opacity: 1;
+}
+
+.contact-us .popup p {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+}
+
+.contact-us .popup-close {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+}
+
+.contact-us .popup-close:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.about {
   padding: 4rem;
+}
+
+.about h2 {
+  padding-bottom: 2rem;
+}
+
+.about h3 {
+  padding-left: 2rem;
+}
+
+.about p {
+  padding-left: 2rem;
+}
+
+.about p:nth-last-child() {
+  font-style: italic;
+}
+
+.about a {
+  text-decoration: none;
+  color: #cadd74;
+}
+
+.about a:hover {
+  color: #33381d;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
   background-color: #f7f7f7;
 }
 
-body .map h2 {
-  text-transform: uppercase;
-  color: #cadd74;
-  padding-bottom: 2rem;
+footer p {
+  margin: 0;
+}
+
+footer a {
+  padding-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    
     <title>Грузоперевозки ООО Ермак</title>
 </head>
 <body>
    <header>
         <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light ">
+            <nav class="navbar navbar-expand-md  ">
                 <a class="navbar-brand" href="#">Ермак (тут логотип)</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -17,16 +18,16 @@
               
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                   <ul class="navbar-nav ml-auto">
-                    <li class="nav-item "><a class="nav-link" href="#">О нас </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Услуги </a></li> 
-                    <li class="nav-item"><a class="nav-link" href="#">Планы и цены </a></li> 
-                    <li class="nav-item"><a class="nav-link" href="#">Связь с нами</a></li>                   
+                    <li class="nav-item"><a class="nav-link" href="#services">Услуги </a></li> 
+                    <li class="nav-item"><a class="nav-link" href="#price">Планы и цены </a></li> 
+                    <li class="nav-item "><a class="nav-link" href="#comment">Отзывы </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-us">Связь с нами</a></li>                   
                   </ul>
                 </div>
               </nav>
         </div>
     </header>
-    <header class="about" >
+    <header class="main-info" >
         <div class=" container col-md-8 text-center ">
            
             <div class="  justify-content-center">
@@ -34,16 +35,16 @@
                
                 <p>Мы в деле  уже <b>10 лет</b> и можем смело заявить, что прекрасно справляемся со своей работой.</p>
                 <p>Сейчас наш автопарк расширяется и мы можем брать всё больше и больше грузов.</p> 
-                <p>Вы можете связаться с нашими менеджерами <b>24/7</b> написав на почту или же позвонив по одному из указанных <a  href="#">контактов.</a> </p> 
+                <p>Вы можете связаться с нашими менеджерами <b>24/7</b> заказав звонок или же позвонив по одному из указанных <a  href="#about">контактов.</a> </p> 
                 <p>Ознакомьтесь с нашим <a href="https://ati.su/firms/2281083/info" target="_blank">профилем</a> на сайте <abbr title="АвтоТрансИнфо">АТИ</abbr></p>
-                <a  href="#" class="about__link">Связаться</a>
+                <a  href="#contact-us" class="main-info__link">Связаться</a>
             </div>
           
         </div>
         
     </header>
     
-    <section class="services">
+    <section class="services" id="services">
       <div class="container text-center">
         <h2>Услуги для вас</h2>
         <div class="row justify-content-around pt-5 ">
@@ -62,13 +63,33 @@
         </div>
       </div>
       </section>
-      <section class="price">
+      <section class="price" id="price">
         <div class="container text-center">
           <h2>Планы и цены</h2>
           <p>Тут что то будет</p>
         </div>
       </section>
-      <section class="contact-us">
+      <section class="comment" id="comment">
+        <div class="container">
+          <h2>Отзывы</h2>
+          <div class="row justify-content-around">
+            <div class="comment__item col-lg-4">
+              <i class="fas fa-user-circle fa-4x"></i>
+              <p>Юлия</p>
+              <p>ООО &#171;Лига Движения&#187;</p> 
+              <p>Работали с данной компанией по маршруту Иркутск — Хабаровск. Все доставили вовремя, документы были предоставлены верно, всегда на связи! Будем работать еще! Отдельное спасибо Юлии. Вы умница! Желаем успехов и добросовестных заказчиков! Спасибо.))</p>
+            </div>
+            <div class="comment__item col-lg-4 ">
+              <i class="fas fa-user-circle fa-4x"></i>
+              <p>Колмычков Семён</p>
+              <p>ООО &#171;РусДилерТранс&#187;</p> 
+              <p>Осуществляли перевозку экскаватора KOMATSU PC400 с Владивостока в Иркутск. Груз доставлен раньше срока, водитель всегда на связи, все погрузочные документы подписаны верно. Отдельное спасибо Виктору, Юле и Александру! Рекомендуем</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="contact-us" id="contact-us">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 text-center">
@@ -86,10 +107,10 @@
                    
                  </div>
                  <div class="row ">
-                     <input type="text" name="phone" id="phone" class="txt col-md-12" tabindex="2" placeholder="Номер телефона" required >  
+                     <input type="text" name="phone" pattern="{16}" id="phone" class="txt col-md-12" tabindex="2" placeholder="Номер телефона" required >  
                  </div>
                  <div class="row">
-                    <textarea name="message" id="message" class="txtarea col-md-12" tabindex="3" placeholder="Добавьте сообщение..." required></textarea>
+                    <textarea name="message" id="message" class="txtarea col-md-12" tabindex="3" placeholder="Добавьте сообщение..." title="Необязательное поле" ></textarea>
                  </div>
                  <div class="row">
                  <input type="submit" id="submit" name="submit" class="submitbtn col-md-12" tabindex="4" value="Отправить">
@@ -98,19 +119,34 @@
             </form>
           </div>
         </div>
-    </section> 
-   <section class="map">
-      <div class="container col-md-6 text-center ">
-        <h2>Как нас найти</h2>
-        <div class=" justify-content-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2052.3628438871215!2d104.2835504276973!3d52.285429625929744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83b4a9d05bef9%3A0x5b4fd4b8dcbaeb15!2zU2Nob29sIOKEliAxMQ!5e0!3m2!1sru!2sru!4v1588439948269!5m2!1sru!2sru" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
-        </div> 
-      </div>
+        <div class="popup-fade">
+          <div class="popup text-center">
+            <i class="popup-close fas fa-times fa-2x text-end"></i>
+            <p>Ваша заявка отправлена.</p>
+          </div>		
+        </div>
     </section>
+    <section class="about" id="about">
+      <div class="container">
+        <h2>Контакты </h2>
+        <h3>ООО &#171;Ермак&#187;</h3>
+        <p><i class="fas fa-phone fa-2x"></i><a href="tel:+79041172825"> +7(904)-117-28-25</a> Тимофей</p>
+        <p><i class="fas fa-phone fa-2x"></i> <i class="fab fa-whatsapp fa-2x" style="color:#4FCE5D"></i><a href="tel:+79041263003"> +7(904)-126-30-03</a> Анна</p>
+        <p>Юридический адрес: г.Иркутск, п.Плишкино, ул.Совхозная д.12</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3447.2322583187333!2d104.48282625275625!3d52.34210418557567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5da83771f954008b%3A0x89c443097542e0b0!2z0KHQvtCy0YXQvtC30L3QsNGPINGD0LsuLCAxMiwg0J_Qu9C40YjQutC40L3Qviwg0JjRgNC60YPRgtGB0LrQsNGPINC-0LHQuy4sIDY2NDUxMQ!5e0!3m2!1sru!2sru!4v1589890192152!5m2!1sru!2sru" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </section> 
+    <footer>
+      <div class="container">
+          <p>&copy; 2020 Сделано Олейниченко<a href="https://github.com/oleinichenko"  target="_blank"><i class="fab fa-github" style="color:#211F1F"></i></a><a href="https://vk.com/id124892962"  target="_blank"><i class="fab fa-vk" style="color:#4c75a3"></i></a></p>
+      </div>
+   </footer>
+   
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/557f4f9092.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
     <script src="js/jquery.mask.min.js"></script>
 </body>
